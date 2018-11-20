@@ -125,7 +125,7 @@
 
 ##### Third Section, Constructs #####
 
-# Exercises:
+#### Exercises:
 
 # 1 - Given that a = [1,2,3,4,[5,6,7]]
 # Delete the first value.
@@ -146,16 +146,45 @@
 
 # Take an input value from the user and delete it (if it is present), print "value not present" if the value is not present in the list.
 
-phraseList = []
-storedVar = input('Hey, Type anything. But type Q to quit: ')
+# phraseList = []
+# storedVar = input('Hey, Type anything. But type Q to quit: ')
+#
+# while True:
+#     if 'Q' in storedVar:
+#         break
+#     elif storedVar in phraseList:
+#         print("Hey! You've already typed that! But here's your current list.\n", phraseList)
+#         storedVar = input('Try another again! Or enter "Q" to quit!: ')
+#     else:
+#         phraseList.append(storedVar)
+#         print("Here's your current list: ", phraseList)
+#         storedVar = input("Try more characters!: ")
 
-while True:
-    if 'Q' in storedVar:
-        break
-    elif storedVar in phraseList:
-        print("Hey! You've already typed that! But here's your current list.\n", phraseList)
-        storedVar = input('Try another again! Or enter "Q" to quit!: ')
-    else:
-        phraseList.append(storedVar)
-        print("Here's your current list: ", phraseList)
-        storedVar = input("Try more characters!: ")
+#2
+# Given that
+
+# a = {"IN":"India", "ES":"Espanol"}
+
+# Delete the key "IN".
+
+# del a['IN']
+# print(a)
+
+# Delete the key "ES"
+# del a['ES']
+
+# Delete the variable a.
+# del a
+
+# -- More Exercises --
+# 1
+# Take the name, age and score of the user as input. Print their percentage. If the percentage is less than 60, print F, if percentage is between 60 and 70 print B and if percentage is greater than 70 print A. Marks are out of 100.
+
+score = int(input('What was your test score? : '))
+
+if score < 60:
+    print('YOU FAIL. LOL')
+elif score >= 60 and score < 70:
+    print('Ya get a B. Grats.')
+else:
+    print('YOU GOT AN A! YAHOO!')

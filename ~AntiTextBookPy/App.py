@@ -377,10 +377,156 @@
 
 #4 Print all odd numbers less than 100 using while.
 
+# i = 0
+#
+# while i < 100:
+#     if i % 2 != 0:
+#         print(i)
+#         i += 1
+#     else:
+#         i += 1
+#         continue
 
 
+# 5 For a list [1,2,3,4,5], write a program which checks if 6 is present in the list, using while.
+#
+# aList = [1,2,3,4,5,6]
+#
+# while True:
+#     if 6 in aList:
+#         print("THERE'S A 6 IN THIS LIST! ABORT!")
+#         break
+#     else:
+#         print("This list checks out. No sixes.")
+#         break
 
 
-# For a list [1,2,3,4,5], write a program which checks if 6 is present in the list, using while.
+# 6 Print all numbers from 0 to 10 except 4 and 5.
 
-# Print all numbers from 0 to 10 except 4 and 5.
+
+# for i in range(11):
+#     if i != 4 and i != 5:
+#         print(i)
+
+"""
+****List Comprehension Notes:****
+
+Shortcut for working with lists, to perform filter or some other operation on the entire list
+
+Example:
+lines = [line.strip() for line in lines]
+1st arg is an element of the list, 2nd arg is a for loop, 3rd arg is optional but you may have an 'if' block there.
+
+another example:
+a = [1, 3, 4, 5, 5]
+b = [i for i in a if i > 3]
+print(b)
+
+This would print all values greater than 3
+
+Syntax:
+[condition for i in <list> if <another condition>]
+
+****FILES NOTES****
+
+Examples of working with files:
+even_file = open('even.txt', w)
+
+the w writes (also creates a file if it doesn't exist). There's also r for read. a for append.
+
+close() your files when your done with them to conserve resources
+
+reading files requires the .readlines() method.
+
+There's also a writelines()
+
+Binary mode:
+f = open('file.txt', 'rb')
+'b' stands for binary, and you can use r/w/a with it
+
+Read:
+f.read(1) reads the first pointer and continues with each calling, starting from 0.
+
+f.tell() tells you where the pointer is located.
+
+f.seek() sets the pointer to any position of your choice. Beginning by default
+"""
+
+#Exercises
+
+# 1 Take the user's name, age and height as input and write them to a file using this format. name,age,height.
+
+# f = open('file.txt', 'w')
+#
+# userInfo = input('Pleast type your name, age, and height : ')
+# f.writelines(userInfo)
+# f.close()
+
+#2 Read a file "input.txt" and print all the lines which are present multiple times. Please create the input.txt file in such a way that it has many lines and few of them are present multiple times.
+
+
+# f = open('file.txt', 'r')
+# lines = f.readlines()
+# lines = [line.strip() for line in lines]
+# f.close()
+#
+# for i in lines:
+#     if lines.count(i) > 1:
+#         print(i)
+
+
+# 3 Read a file "input.txt" and print how many times each line is present.
+
+# f = open('file.txt', 'r')
+# lines = f.readlines()
+# lines = [line.strip() for line in lines]
+# f.close()
+#
+# for i in lines:
+#     print(i, lines.count(i))
+
+# 4 There are two files, "file1.txt" and "file2.txt"
+#
+# 4(a) swap the content of both files.
+
+rFOne = open('file.txt', 'r')
+linesOne = rFOne.readlines()
+rFOne.close()
+
+rFTwo = open('file2.txt', 'r')
+linesTwo = rFTwo.readlines()
+rFTwo.close()
+
+wFOne = open('file.txt', 'w')
+for i in linesTwo:
+    wFOne.write(i)
+wFOne.close()
+
+wFTwo = open('file2.txt', 'w')
+for i in linesOne:
+    wFTwo.write(i)
+wFTwo.close()
+
+
+# append the content of file1.txt to file2.txt.
+# append content of file2.txt to file1.txt.
+# take unique content of both files and write them to file3.txt
+# Use any file created above. Take a positive number as input from the user and read those many characters from the text file.
+#
+# Prepare a csv file like this: first field = name, second onwards marks/100.
+#
+# tom,10,10,10
+# tim,20,20,20
+# Print the name of the student with highest marks.
+# Print the name of the student with highest marks in upper case.
+# Print the highest score.
+# calculate the total score of each student, add the total at the end of the line and write everything to result.csv
+# sample output:
+#
+# tom,10,10,10,30
+# tim,20,20,20,60
+# Read the result.csv file and create a new file named result.txt like the following sample output.
+#
+# tom-10-10-10-30
+# tim-20-20-20-60
+# read the result.txt file. Print every other character from the file.

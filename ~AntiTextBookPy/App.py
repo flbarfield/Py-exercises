@@ -1,4 +1,4 @@
-###### First Section, Operators ######
+"""###### First Section, Operators ######"""
 
 # Exercise:
 
@@ -489,44 +489,76 @@ f.seek() sets the pointer to any position of your choice. Beginning by default
 #
 # 4(a) swap the content of both files.
 
-rFOne = open('file.txt', 'r')
-linesOne = rFOne.readlines()
-rFOne.close()
-
-rFTwo = open('file2.txt', 'r')
-linesTwo = rFTwo.readlines()
-rFTwo.close()
-
-wFOne = open('file.txt', 'w')
-for i in linesTwo:
-    wFOne.write(i)
-wFOne.close()
-
-wFTwo = open('file2.txt', 'w')
-for i in linesOne:
-    wFTwo.write(i)
-wFTwo.close()
-
-
-# append the content of file1.txt to file2.txt.
-# append content of file2.txt to file1.txt.
-# take unique content of both files and write them to file3.txt
-# Use any file created above. Take a positive number as input from the user and read those many characters from the text file.
+# rFOne = open('file.txt', 'r')
+# linesOne = rFOne.readlines()
+# rFOne.close()
 #
-# Prepare a csv file like this: first field = name, second onwards marks/100.
+# rFTwo = open('file2.txt', 'r')
+# linesTwo = rFTwo.readlines()
+# rFTwo.close()
 #
-# tom,10,10,10
-# tim,20,20,20
-# Print the name of the student with highest marks.
-# Print the name of the student with highest marks in upper case.
-# Print the highest score.
-# calculate the total score of each student, add the total at the end of the line and write everything to result.csv
-# sample output:
+# wFOne = open('file.txt', 'w')
+# for i in linesTwo:
+#     wFOne.write(i)
+# wFOne.close()
 #
-# tom,10,10,10,30
-# tim,20,20,20,60
-# Read the result.csv file and create a new file named result.txt like the following sample output.
+# wFTwo = open('file2.txt', 'w')
+# for i in linesOne:
+#     wFTwo.write(i)
+# wFTwo.close()
+
+
+#4 (b) append the content of file1.txt to file2.txt.
+
+# rFOne = open('file.txt', 'r')
+# linesOne = rFOne.readlines()
+# rFOne.close()
 #
-# tom-10-10-10-30
-# tim-20-20-20-60
-# read the result.txt file. Print every other character from the file.
+# aFTwo = open('file2.txt', 'a')
+# for i in linesOne:
+#     aFTwo.write(i)
+# aFTwo.close()
+
+# 4 (c) append content of file2.txt to file1.txt.
+
+# rFTwo = open('file2.txt', 'r')
+# linesTwo = rFTwo.readlines()
+# rFTwo.close()
+#
+# aFOne = open('file.txt', 'a')
+# for i in linesTwo:
+#     aFOne.write(i)
+# aFOne.close()
+
+# 4 (d) take unique content of both files and write them to file3.txt
+
+# rfOne = open('file.txt', 'r')
+# linesOne = rfOne.readlines()
+# rfOne.close()
+#
+# rfTwo = open('file2.txt', 'r')
+# linesTwo = rfTwo.readlines()
+# rfTwo.close()
+#
+# newFile3 = open('file3.txt', 'a')
+# for i in linesOne:
+#     newFile3.write(i)
+# for i in linesTwo:
+#     newFile3.write(i)
+#
+# newFile3.close()
+
+# 4 (e) Use any file created above. Take a positive number as input from the user and read those many characters from the text file.
+
+# userNum = int(input('How many characters would you like me to read from file3?\n:'))
+#
+# newFile3 = open('file3.txt', 'r')
+#
+# print(newFile3.read(userNum))
+
+"""Section: Exception Handling"""
+
+try:
+	f = open("lines.txt", "r")
+except Exception as e:
+	print(e)

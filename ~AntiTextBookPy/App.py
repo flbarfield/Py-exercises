@@ -557,8 +557,40 @@ f.seek() sets the pointer to any position of your choice. Beginning by default
 # print(newFile3.read(userNum))
 
 """Section: Exception Handling"""
+# Notes:
+# example -
+#
+# try:
+#     j = 100/i
+# except ZeroDivisionError as e:
+#     print(e)
+# except Exception as e:
+#     print(e)
+# finally:
+#     print('This block always gets executed')
+#
+# you can have as many excepts as you like, specifics towards the top and more general towards the bottom
+#
+# exceptions allow your program to still run while handling errors. Printing it to the screen, emailing to departments, and etc.
 
-try:
-	f = open("lines.txt", "r")
-except Exception as e:
-	print(e)
+"""Section: Functions"""
+# Notes:
+#
+# used to save code duplication, making code easier to edit.
+#
+# def function_name(arg1, arg2):
+#     <statements>
+
+# You can pre-set default arguments:
+# def power(number, exp=2):
+#     print(number ** exp)
+#
+# any number that's called will be exponentially raised by two by default of unset. EX: power(2). Default arguments must be on the far right after declaration of mandatory arguments (number in example case)
+#
+# return: returns a function's output to the caller, helpful for processing data that you don't want to print ex:
+
+# def add(name, mode):
+#     return name+mode, name-mode
+#
+# one, two = add('this', 'that')
+# print(one, two)
